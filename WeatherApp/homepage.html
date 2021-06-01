@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body onload="document.getElementById('enter-button').disabled = true">
+    <div id="landing-page">
+        <button id="home-button" onclick="window.location.href='homepage.html'">Home</button>
+        <div id="display">
+            <h1 id="display-heading">Check Out Today's Weather</h1>
+            <select name="parish" id="parish" onchange="document.getElementById('enter-button').disabled = false">
+                <option value="#" id="#" selected disabled>Please select a location</option>
+                <option value="Kingston">Kingston</option>
+                <option value="Portland">Portland</option>
+            </select>
+            <br>
+            <button id="enter-button" onclick="getParish()">
+                <span class="material-icons-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

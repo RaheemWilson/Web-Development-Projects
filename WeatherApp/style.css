@@ -1,0 +1,143 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fff;
+    background: url(background.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::after, html::after{
+    content: "";
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: rgba(0, 0, 0, 0.02);
+    pointer-events: none;
+}
+
+#home-button{
+    background: transparent;
+    width: 5.5em;
+    height: 2.75em;
+    margin-top: 1em;
+    margin-right: 1em;
+    font-size: 1em;
+    float: right;
+    border: #fff solid 1px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#display{
+    text-align: center;
+    padding: 14em 0 1em;
+}
+
+#display-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    font-weight: 400;
+    padding: 0.5em 1em 0;
+}
+
+#parish{
+    background: transparent;
+    width: 15em;
+    height: 2.25em;
+    font-size: 1.25em;
+    padding-left: 0.5em;
+    margin-bottom: 4em;
+    border: #fff solid 1px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#parish *{
+    font-family: 'Montserrat', sans-serif;
+    color: #282828;
+    font-size: 0.9em;
+}
+
+#enter-button{
+    background: transparent;
+    color: #fff;
+    width: 7em;
+    height: 3em;
+    border-radius: 50px;
+    border: #fff solid 1px;
+}
+
+#parish:hover, #home-button:hover, #enter-button:hover{
+    background: rgba(255, 255, 255, 0.75);
+    color: #282828;
+}
+
+/* Weather Page */
+#display-info{
+    text-align: center;
+    padding: 10em 0 1em;
+}
+
+#temp{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    font-weight: 400;
+}
+
+#current-weather{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+}
+
+#current-weather h1{
+    font-size: 7em;
+    font-weight: lighter;
+    margin-top: 0em;
+}
+
+#current-weather p{
+    font-size: 2.5em;
+    margin-top: 0.5em;
+}
+
+#current-weather img{
+    width: 8em;
+    height: 8em;
+    margin-top: 1em;
+}
+
+#weather-description{
+    font-size: 1.75em;
+    margin-top: -3.5em;
+    padding-bottom: 1em;
+}
+
+#daily-weather-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-left: -1.5em;
+}
+
+.weather{
+    list-style: none;
+    display: grid;
+    grid-template-rows: 4.5em 0.5em 2em;
+    gap: 1em;
+    justify-content: center;
+    width: 10em;
+    height: 10em;
+    background: rgba(255, 255, 255, 0.75);
+    color: #282828;   
+}
+
+.weather img{
+    margin-top: -0.5em;
+    width: 8em;
+    height: 8em;
+}
+
