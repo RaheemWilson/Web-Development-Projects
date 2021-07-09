@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Roboto&display=swap');
+
+$bg-color: #016FB9;
+$color: #ffffff;
+$header-font: 'Cherry Cream Soda', cursive;
+$font: 'Roboto', sans-serif;
+$font-color: #01233B;
+
+
+
+
+body {
+    background-color: $bg-color;
+    font-family: $font;
+    color: $font-color;
+}
+
+header{
+  text-align: center;
+  color: $color;
+  font-family: $header-font;
+  line-height: 1rem;
+  top: 1rem;
+}
+
+#game-content{
+  display: inline-flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  margin-top: 3rem;
+
+  #challenge-info{
+    display: grid;
+
+    @media (max-width: 48rem){
+      width: 100%
+    }
+    width: 40%;
+
+    #trivia{
+      padding-left: 1rem;
+
+      @media (max-width: 48rem){
+        text-align: center;
+      }
+    }
+    
+
+    #fill-blanks{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      user-select: none;
+      p {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-bottom: 2px solid $font-color;
+        margin: 0 0.25rem;
+        font-size: 25px;
+        text-align: center;
+      }
+    
+      .letter-char{
+        border-bottom: none;
+      }
+    
+      .letter{
+        color: transparent;
+      }
+    
+      .visible{
+        color: $font-color;
+        border-bottom: none;
+      }
+    }
+
+    #keypad{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+      
+      .alphabet{
+        width: 2.5rem;
+        height: 2rem;
+        border-radius: 0.5rem;
+        background-color: rgba($color, 0.5);
+        box-shadow: 0 8px 32px 0 rgba($color: rgb(31,38,135), $alpha: 0.37);
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: (7.5px);
+        color: $color;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        margin: 0.25rem 0.25rem;
+      }
+
+      .alphabet:hover{
+        background-color: rgba($color, 0.9) ;
+        color: rgba($font-color, 0.7);
+      }
+
+      .alphabet:active{
+        background-color: rgba($color, 1) ;
+        color: rgba($font-color, 0.75);
+      }
+
+      .alphabet:disabled{
+        background-color: rgba($color, 0.25) ;
+        color: rgba($font-color,0.25);
+      }
+
+    }
+  }
+
+  #hangman-display{
+    p{
+      text-align: center;
+    }
+
+    canvas{
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+  
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    text-align: center;
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 30%; 
+      border-radius: 0.5rem;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      padding-bottom: 3rem;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+  #emoji{
+    font-size: 36px;
+  }
+  
+  #game{
+    width: 7em;
+    height: 2.5em;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba($color: rgb(31,38,135), $alpha: 0.37);
+    background-color: $bg-color;
+    color: $font-color;
+  }
+}
+
+
+
+  
+
+
