@@ -1,0 +1,32 @@
+.success-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .success-wrapper p {
+    text-align: center;
+    color: #363a40;
+    line-height: 1.3;
+  }
+  
+  button {
+    background: #009688;
+    color: white;
+    border-radius: 2px;
+    margin-top: 15px;
+    border: 1px solid #009688;
+    line-height: 1;
+    transition: all .3s ease-out;
+    padding: .5em .6em;
+    font-size: 1.3em;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background: white;
+    color: #009688;
+  }

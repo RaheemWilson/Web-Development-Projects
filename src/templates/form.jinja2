@@ -1,0 +1,58 @@
+{% extends 'layout.jinja2' %}
+
+{% block styles %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="form-wrapper">
+      <h2 class="title">Let us hear from you</h2>
+
+      <form method="POST" action="{{ url_for('contact') }}">
+          {{ form.csrf_token }}
+          <fieldset class="form-field">{{ form.name.label }} {{ form.name }}
+            {% if form.name.errors %}
+              <ul class="errors">
+                {% for error in form.name.errors %}
+                  <li class="error">
+                      <i class="fas fa-exclamation"></i> <span class="error-message">{{ error }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </fieldset>
+
+          <fieldset class="form-field">{{ form.email.label }} {{ form.email }}
+            {% if form.email.errors %}
+              <ul class="errors">
+                {% for error in form.email.errors %}
+                  <li class="error">
+                      <i class="fas fa-exclamation"></i> <span class="error-message">{{ error }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </fieldset>
+
+          <fieldset class="form-field">{{ form.comment.label }} {{ form.comment }}
+            {% if form.comment.errors %}
+              <ul class="errors">
+                {% for error in form.comment.errors %}
+                  <li class="error">
+                      <i class="fas fa-exclamation"></i> <span class="error-message">{{ error }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </fieldset>
+
+          {{ form.submit }}
+
+      </form>
+    </div>
+</div>
+{% endblock %}
